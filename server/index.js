@@ -12,11 +12,12 @@ import dotenv from 'dotenv';
         conn();
     //Express
         const app = express();
+    //Cors
+        app.use(cors())
         app.use(express.json());
 
 //Middlewares
-    //Cors
-        app.use(cors())
+    
     //BodyParser
         app.use(bodyParser.json())
 
