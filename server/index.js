@@ -5,29 +5,16 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from 'dotenv';
 
-//Initialization
-    //ENV
-        dotenv.config();
-    //Database Connection
-        conn();
-    //Express
-        const app = express();
-    //Cors
-        app.use(cors())
-        app.use(express.json());
+dotenv.config();
+const app = express();
+app.use(cors())
+app.use(express.json());
+app.use(bodyParser.json())
+conn();
+        
+        
 
-//Middlewares
-    
-    //BodyParser
-        app.use(bodyParser.json())
-
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
+        
 
 app.get("/",(req,res)=>{
     res.status(403).send("Forbidden!")
