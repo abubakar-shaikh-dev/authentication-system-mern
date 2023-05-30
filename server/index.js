@@ -5,6 +5,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from 'dotenv';
 
+//Middlewares
+    //Cors
+        app.use(cors())
+    //BodyParser
+        app.use(bodyParser.json())
+        
 //Initialization
     //ENV
         dotenv.config();
@@ -14,11 +20,6 @@ import dotenv from 'dotenv';
         const app = express();
         app.use(express.json());
 
-//Middlewares
-    //Cors
-        app.use(cors())
-    //BodyParser
-        app.use(bodyParser.json())
 
 app.get("/",(req,res)=>{
     res.status(403).send("Forbidden!")
