@@ -1,7 +1,7 @@
 import express from "express";
-import { conn } from "./database/conn.js"
-import route from "./routes/route.js"
-const cors = require('cors');
+import { conn } from "./database/conn.js";
+import route from "./routes/route.js";
+import cors from 'cors';
 import bodyParser from "body-parser";
 import dotenv from 'dotenv';
 
