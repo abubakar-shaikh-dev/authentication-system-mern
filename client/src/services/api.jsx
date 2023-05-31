@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://authentication-system-mern-backend.vercel.app/api"
+const URL = "https://authentication-system-mern.vercel.app/api"
 
 export async function registerUser(data){
     try {
