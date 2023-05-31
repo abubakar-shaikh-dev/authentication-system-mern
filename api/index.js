@@ -26,6 +26,6 @@ app.get("/",(req,res)=>{
 
 app.use("/api",route);
 
-const PORT = 3000;
+const PORT = 8000;
 
 app.listen(PORT,()=>console.log(`[PASS] Server Running on PORT ${PORT}`))
